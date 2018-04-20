@@ -1,3 +1,6 @@
+# Details about packages needed:
+# python version is 3.6.1
+#
 name: yad2k
 channels:
 - defaults
@@ -23,9 +26,9 @@ dependencies:
 - libtiff=4.0.6=3
 - libxcb=1.12=1
 - libxml2=2.9.4=0
-- matplotlib=2.0.0=np112py36_0
+- matplotlib=2.0.0=np112py36_0 # should be present
 - mkl=2017.0.1=0
-- numpy=1.12.1=py36_0
+- numpy=1.12.1=py36_0 # should be present
 - olefile=0.44=py36_0
 - openssl=1.0.2k=1
 - pcre=8.39=1
@@ -33,13 +36,13 @@ dependencies:
 - pip=9.0.1=py36_1
 - pyparsing=2.1.4=py36_0
 - pyqt=5.6.0=py36_2
-- python=3.6.1=0
+- python=3.6.1=0 #!!!!
 - python-dateutil=2.6.0=py36_0
 - pytz=2017.2=py36_0
 - pyyaml=3.12=py36_0
 - qt=5.6.2=3
 - readline=6.2=2
-- scipy=0.19.0=np112py36_0
+- scipy=0.19.0=np112py36_0 # Think we have this, not sure
 - setuptools=27.2.0=py36_0
 - sip=4.18=py36_0
 - six=1.10.0=py36_0
@@ -50,9 +53,9 @@ dependencies:
 - yaml=0.1.6=0
 - zlib=1.2.8=3
 - pip:
-  - keras==2.0.3
+  - keras==2.0.3 # exists
   - protobuf==3.2.0
-  - pydot-ng==1.0.0
+  - pydot-ng==1.0.0 # not sure
   - tensorflow-gpu==1.0.1
   - theano==0.9.0
 prefix: /home/allan/anaconda3/envs/yad2k

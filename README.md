@@ -4,6 +4,8 @@
 
 ## Welcome to YAD2K
 
+### This fork ~~is~~ will be made to work on the MIT racecar platform, for OpenZeka MARC
+
 You only look once, but you reimplement neural nets over and over again.
 
 YAD2K is a 90% Keras/10% Tensorflow implementation of YOLO_v2.

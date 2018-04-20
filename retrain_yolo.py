@@ -1,15 +1,14 @@
 """
 This is a script that can be used to retrain the YOLOv2 model for your own dataset.
 """
-import argparse
+import argparse # car has this, I think
 
-import os
+import os # default library
 
-import matplotlib.pyplot as plt
-import numpy as np
-import PIL
-import tensorflow as tf
-from keras import backend as K
+import numpy as np # already installed
+import PIL         # possible problem
+import tensorflow as tf # already installed
+from keras import backend as K                      # obviously already set up
 from keras.layers import Input, Lambda, Conv2D
 from keras.models import load_model, Model
 from keras.callbacks import TensorBoard, ModelCheckpoint, EarlyStopping
@@ -19,6 +18,7 @@ from yad2k.models.keras_yolo import (preprocess_true_boxes, yolo_body,
 from yad2k.utils.draw_boxes import draw_boxes
 
 # Args
+#region get command line arguments, likely going to be discarded
 argparser = argparse.ArgumentParser(
     description="Retrain or 'fine-tune' a pretrained YOLOv2 model for your own data.")
 
@@ -39,6 +39,7 @@ argparser.add_argument(
     '--classes_path',
     help='path to classes file, defaults to pascal_classes.txt',
     default=os.path.join('..', 'DATA', 'underwater_classes.txt'))
+#endregion
 
 # Default anchor boxes
 YOLO_ANCHORS = np.array(
@@ -46,9 +47,11 @@ YOLO_ANCHORS = np.array(
      (7.88282, 3.52778), (9.77052, 9.16828)))
 
 def _main(args):
+
+    # get stuff to use to train the model?
     data_path = os.path.expanduser(args.data_path)
     classes_path = os.path.expanduser(args.classes_path)
-    anchors_path = os.path.expanduser(args.anchors_path)
+    anchors_path = os.path.expanduser(args.anchors_path) #WHAT ARE ANCHORS!?!?!?!?!??!?!?
 
     class_names = get_classes(classes_path)
     anchors = get_anchors(anchors_path)
